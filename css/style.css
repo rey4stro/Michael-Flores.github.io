@@ -1,0 +1,171 @@
+:root{
+    --background-color: rgb(29, 41, 97);
+    --text-color: rgb(186, 186, 186);
+    --text-color-complemento: rgb(109, 108, 108);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: var(--background-color);
+    overflow-y: hidden;
+}
+
+li{
+    list-style: none;
+}
+
+.content{
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+}
+.izquierda{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 280px;
+    box-sizing: border-box;
+    position: relative;
+    font-size: 30px;
+    gap: 10px;
+    border-radius: 10px;
+    
+    padding: 10px;
+    transition: all 0.9s ease;
+    color: var(--text-color);
+}
+.izquierda li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.izquierda li:hover{
+   transform: scale(1.09);
+   color: var(--text-color-complemento);
+}
+.izquierda a:hover{
+    color: var(--text-color-complemento);
+}
+.izquierda a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    display: flex;
+    gap: 10px;
+}
+.izquierda h2{
+    color: var(--text-color);
+}
+.toggle{
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#toggle-btn{
+    align-items: center;
+}
+.closed{
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+}
+
+.closed h2, .closed a span{
+    display: none;
+}
+
+.perfil-nombre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transition: all 0.9s ease;
+    color: var(--text-color);
+}
+.perfil-nombre img{
+    width: 100%;
+    border-radius: 50%;
+}
+.derecha{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 20PX;
+    gap: 10px;
+    height: 100%;
+    overflow-y: scroll;
+    border: solid green;
+    box-sizing: border-box;
+}
+.idioma{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 10px;
+    font-size: 30px;
+    gap: 10px;
+    color: var(--text-color);
+}
+.seccion{
+    width: 100%;
+    padding: 10px;
+}
+#contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#contacto h1{
+    color: var(--text-color);
+}
+.contacto-info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-color);
+    padding: 10px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.info i{
+    font-size: 45px;
+}
+#habilidades{
+    display: flex;
+    flex-direction: column;
+    border: solid red;
+    gap: 10px;
+}
+
+.hab-info{
+    border: solid cyan;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 10px;
+}
