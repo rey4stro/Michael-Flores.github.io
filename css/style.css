@@ -1,7 +1,17 @@
-:root{
-    --background-color: rgb(29, 41, 97);
-    --text-color: rgb(186, 186, 186);
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+:root {
+    --background-color: rgb(214, 219, 241);
+    --background-color-complemento: rgb(186, 255, 219);
+    --text-color: rgb(47, 42, 42);
     --text-color-complemento: rgb(109, 108, 108);
+}
+
+body.dark-theme {
+    --background-color: rgb(6, 9, 20);
+    --background-color-complemento: rgb(11, 20, 16);
+    --text-color-complemento: rgb(255, 255, 255);
+    --text-color: rgb(245, 199, 199);
 }
 
 * {
@@ -11,26 +21,33 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     display: flex;
     height: 100vh;
     background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 1s, color 1s;
     overflow-y: hidden;
+
 }
 
-li{
+li {
     list-style: none;
 }
 
-.content{
+.content {
     width: 100%;
     min-height: 100vh;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     overflow-y: hidden;
+    position: relative;
 }
-.izquierda{
+
+.izquierda {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -41,34 +58,40 @@ li{
     font-size: 30px;
     gap: 10px;
     border-radius: 10px;
-    
+
     padding: 10px;
     transition: all 0.9s ease;
     color: var(--text-color);
 }
-.izquierda li{
+
+.izquierda li {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.izquierda li:hover{
-   transform: scale(1.09);
-   color: var(--text-color-complemento);
-}
-.izquierda a:hover{
+
+.izquierda li:hover {
+    transform: scale(1.09);
     color: var(--text-color-complemento);
 }
-.izquierda a{
+
+.izquierda a:hover {
+    color: var(--text-color-complemento);
+}
+
+.izquierda a {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 600;
     display: flex;
     gap: 10px;
 }
-.izquierda h2{
+
+.izquierda h2 {
     color: var(--text-color);
 }
-.toggle{
+
+.toggle {
     position: absolute;
     top: 6px;
     left: 0;
@@ -77,44 +100,63 @@ li{
     align-items: center;
     justify-content: center;
 }
-#toggle-btn{
+
+#toggle-btn {
     align-items: center;
 }
-.closed{
+
+#toggle-btn:hover {
+    cursor: pointer;
+    color: var(--text-color-complemento);
+}
+
+.closed {
     width: 50px;
     align-items: center;
     justify-content: center;
     padding: 4px;
 }
 
-.closed h2, .closed a span{
+.closed h2,
+.closed a span {
     display: none;
 }
 
-.perfil-nombre{
+.perfil-nombre {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    transition: all 0.9s ease;
     color: var(--text-color);
 }
-.perfil-nombre img{
+
+.perfil-nombre img {
     width: 100%;
     border-radius: 50%;
 }
-.derecha{
+
+.derecha {
     display: flex;
     flex-direction: column;
     width: 100%;
     padding-left: 20PX;
-    gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 50px;
     height: 100%;
     overflow-y: scroll;
-    border: solid green;
     box-sizing: border-box;
 }
-.idioma{
+.derecha::-webkit-scrollbar{
+    background-color: var(--background-color);
+    width: 10px;
+}
+.derecha::-webkit-scrollbar-thumb{
+    background-color: var(--text-color);
+    border-radius: 5px;
+    
+}
+.idioma {
     display: flex;
     align-items: center;
     justify-content: end;
@@ -122,50 +164,258 @@ li{
     font-size: 30px;
     gap: 10px;
     color: var(--text-color);
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
-.seccion{
+
+.seccion {
     width: 100%;
     padding: 10px;
+    background: var(--background-color);
+    background: radial-gradient(circle, var(--background-color) 0%, var(--background-color-complemento) 100%);
+    transition: background 1s;
+    border-radius: 20px;
 }
-#contacto{
+
+#contacto {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-#contacto h1{
-    color: var(--text-color);
-}
-.contacto-info{
-    width: 100%;
-    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    color: var(--text-color);
-    padding: 10px;
+    justify-content: center;
+    gap: 20px;
 }
-.info{
+
+#contacto h1 {
+    color: var(--text-color);
+}
+
+.info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-.info i{
+
+.info i {
     font-size: 45px;
 }
-#habilidades{
+
+#habilidades {
     display: flex;
     flex-direction: column;
-    border: solid red;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
-.hab-info{
-    border: solid cyan;
+.hab-info {
+
     margin-top: 10px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 20px;
     padding: 10px;
+}
+
+#sobremi {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#sobremi img {
+    border-radius: 25%;
+    max-width: 500px;
+    align-items: center;
+    justify-content: center;
+}
+
+#sobremi p {
+    font-size: 20px;
+}
+
+#button-idioma {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-color);
+    z-index: 2;
+}
+
+.idioma {
+    position: absolute;
+    padding: 5px;
+    top: 1px;
+    right: 15px
+}
+
+#button-idioma i {
+    font-size: 20px;
+}
+
+#button-idioma h1 {
+    font-size: 20px;
+}
+
+#button-idioma:hover {
+    color: var(--text-color-complemento);
+    cursor: pointer;
+}
+
+#button-theme {
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+    color: var(--text-color);
+    z-index: 2;
+}
+
+#button-theme:hover {
+    cursor: pointer;
+    color: var(--text-color-complemento);
+}
+
+#proyectos {
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.proyecto {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid var(--text-color-complemento);
+    border-radius: 10px;
+    padding: 5px;
+    gap: 5px;
+
+}
+
+.proyecto:hover {
+    transform: scale(1.2);
+    background-color: var(--background-color);
+    border: solid var(--text-color);
+    transition: transform 0.9s;
+}
+
+.proyecto hr {
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color-complemento);
+    border: solid 1px var(--text-color-complemento);
+}
+
+.proyecto img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.proyecto-tecnologias {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.proyecto-tecnologias img {
+
+    height: 50px;
+    width: 50px;
+}
+
+.proyecto-enlace {
+    width: 50px;
+    height: 50px;
+}
+
+.proyecto-enlace:hover {
+    transform: scale(1.1);
+}
+
+
+@media screen and (max-width : 650px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .izquierda {
+        width: 100%;
+        padding-top: 50px;
+        justify-content: end ;
+    }
+    .seccion{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .closed {
+        width: 100%;
+        height: 110px;
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        justify-content: center;
+        padding: 4px;
+        box-sizing: border-box;
+    }
+
+    .closed img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .closed .perfil-nombre {
+        width: 40px;
+    }
+    #sobremi{
+        flex-direction: column;
+        padding: 10px  0px  10px 0px;
+    }
+    #sobremi img{
+        width: 100%;
+    }
+    #sobremi p{
+        width: 100%;
+        text-align: center;
+    }
+    .perfil-nombre{
+       
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .perfil-nombre img{
+        
+        width: 100%;
+    }
+    
+    .izquierda{
+        
+        width: 100%;
+    }
 }
