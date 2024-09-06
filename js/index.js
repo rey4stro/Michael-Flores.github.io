@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const theme = document.getElementById("button-theme");
     const savedTheme = localStorage.getItem('theme');
     const btnIdioma = document.getElementById('button-idioma');
-    let idioma = localStorage.getItem('idioma') || "EN"; // Si no hay idioma guardado, usar "ES"
+    let idioma = "ES"
     let idiomajson = {}; // Inicialización del objeto idiomajson
 
     // Deshabilitar el botón hasta que se cargue el JSON
@@ -88,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             idiomaLabel.textContent = "" + "ES"
         }
-        localStorage.setItem('idioma', idioma);  // Guardar el nuevo idioma
 
         // Verificar si el JSON ha sido cargado y la propiedad existe
         if (idiomajson) {
