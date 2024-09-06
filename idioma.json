@@ -46,5 +46,9 @@
     "habilidadesBasededatos": {
         "ES": "Bases de datos y almacenamiento en la nube",
         "EN": "Databases and cloud storage"
+    },
+    "simuladorBlockchain": {
+        "ES": "Simulador Blockchain",
+        "EN": "Blockchain simulator"
     }
 }

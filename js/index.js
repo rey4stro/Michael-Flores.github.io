@@ -12,6 +12,40 @@ document.addEventListener('DOMContentLoaded', () => {
     // Deshabilitar el botón hasta que se cargue el JSON
     btnIdioma.disabled = true;
 
+    
+    //_________Carouse de imageness___________________________________________
+    const carousel = document.querySelector('.carousel');
+    const items = carousel.querySelectorAll('.carousel-item');
+    let currentIndex = 0;
+
+    // Clonar el primer elemento y añadirlo al final
+    carousel.appendChild(items[0].cloneNode(true));
+
+    function nextImage() {
+        currentIndex++;
+        updateCarousel(true);
+    }
+
+    function updateCarousel(isAutomatic = false) {
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        if (currentIndex >= items.length) {
+            setTimeout(() => {
+                carousel.style.transition = 'none';
+                currentIndex = 0;
+                carousel.style.transform = `translateX(0)`;
+                setTimeout(() => {
+                    carousel.style.transition = 'transform 0.8s ease';
+                }, 50);
+            }, isAutomatic ? 800 : 0);
+        }
+    }
+
+    // Cambiar imagen cada 3 segundos
+    setInterval(nextImage, 3000);
+
+
+
     // Cargar el archivo JSON
     fetch('../idioma.json')
         .then(response => response.json())
@@ -70,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById("habilidades-web").textContent = idiomajson.habilidadesWeb[idioma]
             document.getElementById("habilidades-basededatos").textContent = idiomajson.habilidadesBasededatos[idioma]
             document.getElementById("habilidades-plataformas").textContent = idiomajson.habilidadesPlataformas[idioma]
+            document.getElementById("simulador-blockchain").textContent = idiomajson.simuladorBlockchain[idioma]
 
         } else {
             console.warn('JSON no cargado o propiedad "sombremi" no encontrada.');
