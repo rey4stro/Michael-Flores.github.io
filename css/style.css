@@ -245,6 +245,7 @@ li {
     justify-content: center;
     gap: 20px;
     padding: 10px;
+    flex-wrap: wrap;
 }
 
 #sobremi {
@@ -374,8 +375,10 @@ li {
 }
 
 .proyecto-enlace {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--text-color-complemento);
+    padding: 5px;
 }
 
 .proyecto-enlace:hover {
@@ -481,8 +484,8 @@ li {
         max-width: 250px;
     }
 
-    .izquierda {
-
-        width: 100%;
+ 
+    .derecha{
+        padding: 0;
     }
 }
