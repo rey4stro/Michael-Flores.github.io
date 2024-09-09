@@ -143,6 +143,7 @@ li {
     padding-left: 20PX;
     padding-bottom: 20px;
     gap: 50px;
+    align-items: center;
     height: 100%;
     overflow-y: scroll;
     box-sizing: border-box;
@@ -250,16 +251,37 @@ li {
 }
 
 #sobremi {
-    display: flex;
+    display: grid;
+
+    grid-template-columns: 500px 1fr;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     padding: 10px;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap;
+    font-size: 30px;
 }
+.sobremi-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    justify-content: center;
+}
+.udistrital{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-#sobremi img {
+}
+.udistrital img{
+    width: 80px;
+    height: 80px;
+}
+.sobremi-img {
+ 
     border-radius: 25%;
     max-width: 500px;
     align-items: center;
@@ -269,7 +291,12 @@ li {
 #sobremi p {
     font-size: 20px;
 }
-
+#sobremi h1{
+    font-size: 45px;
+}
+#sobremi h2{
+    font-size: 25px;
+}
 #button-idioma {
     display: flex;
     flex-direction: column;
@@ -388,7 +415,9 @@ li {
 
 #inicio {
     width: 100%;
+    max-width: 1500px;
     padding: 0;
+    background-color: var(--background-color);
 }
 
 .carousel-container {
@@ -420,12 +449,51 @@ li {
     border-radius: 15px;
     object-fit: cover;
 }
+#diplomas{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 30px;
+}
+.diplomas-info{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: 150px;
+   
+    box-sizing: border-box;
+    justify-content: center;
+}
+.diplomas-info img{
+    height: 120px;
+    width: 120px;
+}
+.diplomas-info h1{
+   
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    white-space: normal;
+}
 
-@media screen and (max-width : 650px) {
+@media screen and (max-width : 742px) {
     .content {
         flex-direction: column;
     }
-
+    .diplomas-info{
+        flex-direction: column;
+        height: auto;
+    }
+    #diplomas{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     .izquierda {
         width: 100%;
         padding-top: 50px;
@@ -461,12 +529,17 @@ li {
     }
 
     #sobremi {
+        display: flex;
         flex-direction: column;
-        padding: 10px 0px 10px 0px;
+        padding: 0;
+        border: solid red;
     }
-
-    #sobremi img {
+    .sobremi-img{
         width: 100%;
+    }
+    .sobremi-info{
+        border: salmon solid;
+        flex-direction: column;
     }
 
     #sobremi p {
