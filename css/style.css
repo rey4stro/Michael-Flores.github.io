@@ -480,12 +480,23 @@ li {
 }
 
 @media screen and (max-width : 742px) {
+    .idioma{
+      position: absolute;
+      bottom: 0;  
+    }
     .content {
         flex-direction: column;
     }
     .diplomas-info{
         flex-direction: column;
         height: auto;
+    }
+    .toggle {
+        position: relative;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     #diplomas{
         flex-direction: column;
