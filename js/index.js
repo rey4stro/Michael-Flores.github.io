@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Cargar el archivo JSON
-    fetch('../idioma.json')
+    fetch('https://rey4stro.github.io/Michael-Flores.github.io/idioma.json')
         .then(response => response.json())
         .then(data => {
             idiomajson = data;  // Asignar datos cargados a la variable idiomajson
