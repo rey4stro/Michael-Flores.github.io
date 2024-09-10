@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById("habilidades-basededatos").textContent = idiomajson.habilidadesBasededatos[idioma]
             document.getElementById("habilidades-plataformas").textContent = idiomajson.habilidadesPlataformas[idioma]
             document.getElementById("simulador-blockchain").textContent = idiomajson.simuladorBlockchain[idioma]
+            document.getElementById("menu-diplomas").textContent = idiomajson.menuDiplomas[idioma]
 
         } else {
             console.warn('JSON no cargado o propiedad "sombremi" no encontrada.');

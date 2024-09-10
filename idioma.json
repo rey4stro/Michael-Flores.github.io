@@ -50,5 +50,9 @@
     "simuladorBlockchain": {
         "ES": "Simulador Blockchain",
         "EN": "Blockchain simulator"
+    },
+    "menuDiplomas" :{
+        "ES": "Estudios",
+        "EN": "Estudies"
     }
 }

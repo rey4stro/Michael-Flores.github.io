@@ -251,10 +251,8 @@ li {
 }
 
 #sobremi {
-    display: grid;
-
-    grid-template-columns: 500px 1fr;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 10px;
@@ -532,13 +530,11 @@ li {
         display: flex;
         flex-direction: column;
         padding: 0;
-        border: solid red;
     }
     .sobremi-img{
         width: 100%;
     }
     .sobremi-info{
-        border: salmon solid;
         flex-direction: column;
     }
 
