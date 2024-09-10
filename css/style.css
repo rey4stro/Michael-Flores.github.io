@@ -24,13 +24,18 @@ body {
     font-family: "Concert One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     height: 100vh;
     background-color: var(--background-color);
     color: var(--text-color);
     transition: background-color 1s, color 1s;
-    overflow-y: hidden;
+    overflow-y: scroll;
 
+}
+body::-webkit-scrollbar{
+    background-color: transparent;
+    width: 5px;
 }
 
 li {
@@ -93,23 +98,64 @@ li {
 }
 
 .toggle {
-    position: absolute;
-    top: 6px;
-    left: 0;
-    width: 50px;
+    width: 100%;
+    height: 60px;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    font-size: 40px;
 }
 
 #toggle-btn {
+    width: 50px;
+    height: 100%;
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #toggle-btn:hover {
     cursor: pointer;
     color: var(--text-color-complemento);
 }
+.idioma {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 100%;
+    font-size: 30px;
+    gap: 10px;
+    color: var(--text-color);
+}
+
+#button-idioma i {
+    font-size: 20px;
+}
+
+#button-idioma h1 {
+    font-size: 20px;
+}
+
+#button-idioma:hover {
+    color: var(--text-color-complemento);
+    cursor: pointer;
+}
+
+#button-theme {
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+    color: var(--text-color);
+    z-index: 2;
+}
+
+#button-theme:hover {
+    cursor: pointer;
+    color: var(--text-color-complemento);
+}
+
 
 .closed {
     width: 50px;
@@ -160,18 +206,6 @@ li {
 
 }
 
-.idioma {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    padding: 10px;
-    font-size: 30px;
-    gap: 10px;
-    color: var(--text-color);
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
 
 .seccion {
     width: 100%;
@@ -307,38 +341,6 @@ li {
     z-index: 2;
 }
 
-.idioma {
-    position: absolute;
-    padding: 5px;
-    top: 1px;
-    right: 15px
-}
-
-#button-idioma i {
-    font-size: 20px;
-}
-
-#button-idioma h1 {
-    font-size: 20px;
-}
-
-#button-idioma:hover {
-    color: var(--text-color-complemento);
-    cursor: pointer;
-}
-
-#button-theme {
-    border: none;
-    background-color: transparent;
-    font-size: 25px;
-    color: var(--text-color);
-    z-index: 2;
-}
-
-#button-theme:hover {
-    cursor: pointer;
-    color: var(--text-color-complemento);
-}
 
 #proyectos {
 
@@ -480,24 +482,18 @@ li {
 }
 
 @media screen and (max-width : 742px) {
-    .idioma{
-      position: absolute;
-      bottom: 0;  
+    body{
+        overflow-y: scroll;
     }
     .content {
         flex-direction: column;
+        box-sizing: content-box;
     }
     .diplomas-info{
         flex-direction: column;
         height: auto;
     }
-    .toggle {
-        position: relative;
-        
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+    
     #diplomas{
         flex-direction: column;
         align-items: center;
@@ -505,7 +501,6 @@ li {
     }
     .izquierda {
         width: 100%;
-        padding-top: 50px;
         justify-content: end;
     }
 
@@ -519,12 +514,12 @@ li {
 
     .closed {
         width: 100%;
-        height: 110px;
+        height: 50px;
         display: flex;
         flex-direction: row;
-        align-items: end;
-        justify-content: center;
-        padding: 4px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
         box-sizing: border-box;
     }
 
