@@ -41,7 +41,7 @@ body {
 
 }
 body::-webkit-scrollbar{
-    background-color: transparent;
+    background-color: var(--background-color-3);
     width: 5px;
 }
 
@@ -206,7 +206,7 @@ li {
 }
 
 .derecha::-webkit-scrollbar {
-    background-color: var(--background-color);
+    background-color: var(--background-color-3);
     width: 10px;
 }
 
@@ -574,5 +574,9 @@ li {
  
     .derecha{
         padding: 0;
+    }
+    body::-webkit-scrollbar{
+        background-color: var(--background-color-3);
+        width: 15px;
     }
 }
