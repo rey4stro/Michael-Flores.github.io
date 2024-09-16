@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 
 :root {
-    --background-color: rgb(214, 219, 241);
-    --background-color-complemento: rgb(186, 255, 219);
-    --text-color: rgb(47, 42, 42);
-    --text-color-complemento: rgb(109, 108, 108);
+    --background-color: #ffe0f5;
+    --background-color-2: #ffffff;
+    --background-color-3: #b3abff;
+    --background-color-4: #ac6f8a; 
+    --background-color-5: ;
+    --background-color-6: ;
+    --text-color: rgb(0, 0, 0);
+    --text-color-2: rgb(0, 12, 80);
 }
 
 body.dark-theme {
     --background-color: rgb(6, 9, 20);
-    --background-color-complemento: rgb(11, 20, 16);
-    --text-color-complemento: rgb(255, 255, 255);
-    --text-color: rgb(245, 199, 199);
+    --background-color-2: rgb(11, 20, 16);
+    --background-color-3: #011f4d;
+    --text-color-2: rgb(108, 235, 240);
+    --text-color: rgb(226, 226, 226);
 }
 
 * {
@@ -28,6 +33,8 @@ body {
     grid-template-columns: 1fr;
     height: 100vh;
     background-color: var(--background-color);
+   
+    background: linear-gradient(0deg, var(--background-color) 0%, var(--background-color-2) 48%, var(--background-color) 100%);
     color: var(--text-color);
     transition: background-color 1s, color 1s;
     overflow-y: scroll;
@@ -77,11 +84,11 @@ li {
 
 .izquierda li:hover {
     transform: scale(1.09);
-    color: var(--text-color-complemento);
+    color: var(--text-color-2);
 }
 
 .izquierda a:hover {
-    color: var(--text-color-complemento);
+    color: var(--text-color-2);
 }
 
 .izquierda a {
@@ -105,6 +112,7 @@ li {
     align-items: center;
     justify-content: start;
     font-size: 40px;
+    padding-right: 30px;
 }
 
 #toggle-btn {
@@ -117,7 +125,7 @@ li {
 
 #toggle-btn:hover {
     cursor: pointer;
-    color: var(--text-color-complemento);
+    color: var(--text-color-2);
 }
 .idioma {
     width: 100%;
@@ -139,7 +147,7 @@ li {
 }
 
 #button-idioma:hover {
-    color: var(--text-color-complemento);
+    color: var(--text-color-2);
     cursor: pointer;
 }
 
@@ -153,7 +161,7 @@ li {
 
 #button-theme:hover {
     cursor: pointer;
-    color: var(--text-color-complemento);
+    color: var(--text-color-2);
 }
 
 
@@ -180,19 +188,21 @@ li {
 .perfil-nombre img {
     width: 100%;
     border-radius: 50%;
+    background-color: var(--text-color);
 }
 
 .derecha {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-left: 20PX;
-    padding-bottom: 20px;
+    padding: 10px;
+    border-radius: 20px;
     gap: 50px;
     align-items: center;
     height: 100%;
     overflow-y: scroll;
     box-sizing: border-box;
+    background-color: var(--background-color-3);
 }
 
 .derecha::-webkit-scrollbar {
@@ -211,7 +221,7 @@ li {
     width: 100%;
     padding: 10px;
     background: var(--background-color);
-    background: radial-gradient(circle, var(--background-color) 0%, var(--background-color-complemento) 100%);
+    background: radial-gradient(circle, var(--background-color) 0%, var(--background-color-2) 100%);
     transition: background 1s;
     border-radius: 20px;
 }
@@ -360,7 +370,7 @@ li {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: solid var(--text-color-complemento);
+    border: solid var(--text-color-2);
     border-radius: 10px;
     padding: 5px;
     gap: 5px;
@@ -377,8 +387,8 @@ li {
 .proyecto hr {
     width: 100%;
     height: 2px;
-    background-color: var(--text-color-complemento);
-    border: solid 1px var(--text-color-complemento);
+    background-color: var(--text-color-2);
+    border: solid 1px var(--text-color-2);
 }
 
 .proyecto img {
@@ -405,7 +415,7 @@ li {
 .proyecto-enlace {
     width: 60px;
     height: 60px;
-    background-color: var(--text-color-complemento);
+    background-color: var(--text-color-2);
     padding: 5px;
 }
 
@@ -424,6 +434,7 @@ li {
     width: 100%;
     overflow: hidden;
     position: relative;
+    background-color: var(--background-color-3);
 }
 
 .carousel {
