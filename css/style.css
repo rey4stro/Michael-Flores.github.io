@@ -64,13 +64,12 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 280px;
+    width: 400px;
     box-sizing: border-box;
     position: relative;
     font-size: 30px;
     gap: 10px;
     border-radius: 10px;
-
     padding: 10px;
     transition: all 0.9s ease;
     color: var(--text-color);
@@ -78,8 +77,9 @@ li {
 
 .izquierda li {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 10px;
+    width: 100%;
 }
 
 .izquierda li:hover {
@@ -94,12 +94,19 @@ li {
 .izquierda a {
     text-decoration: none;
     color: var(--text-color);
-    font-weight: 600;
+    font-weight: 400;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
+.izquierda a i {
+
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .izquierda h2 {
     color: var(--text-color);
 }
