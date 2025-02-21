@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 
 :root {
-    --background-color: #ffe0f5;
+    --background-color: #ffffff;
     --background-color-2: #ffffff;
-    --background-color-3: #b3abff;
-    --background-color-4: #ac6f8a; 
+    --background-color-3: #bfbfbf;
+    --background-color-4: #ffffff;
     --background-color-5: ;
     --background-color-6: ;
     --text-color: rgb(0, 0, 0);
@@ -12,9 +12,9 @@
 }
 
 body.dark-theme {
-    --background-color: rgb(6, 9, 20);
-    --background-color-2: rgb(11, 20, 16);
-    --background-color-3: #011f4d;
+    --background-color: rgb(9, 2, 21);
+    --background-color-2: rgb(7, 0, 18);
+    --background-color-3: #131018;
     --text-color-2: rgb(108, 235, 240);
     --text-color: rgb(226, 226, 226);
 }
@@ -33,14 +33,15 @@ body {
     grid-template-columns: 1fr;
     height: 100vh;
     background-color: var(--background-color);
-   
+
     background: linear-gradient(0deg, var(--background-color) 0%, var(--background-color-2) 48%, var(--background-color) 100%);
     color: var(--text-color);
     transition: background-color 1s, color 1s;
     overflow-y: scroll;
 
 }
-body::-webkit-scrollbar{
+
+body::-webkit-scrollbar {
     background-color: var(--background-color-3);
     width: 5px;
 }
@@ -107,6 +108,7 @@ li {
     align-items: center;
     justify-content: center;
 }
+
 .izquierda h2 {
     color: var(--text-color);
 }
@@ -134,6 +136,7 @@ li {
     cursor: pointer;
     color: var(--text-color-2);
 }
+
 .idioma {
     width: 100%;
     display: flex;
@@ -241,7 +244,8 @@ li {
     justify-content: center;
     gap: 20px;
 }
-.contacto-info{
+
+.contacto-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -254,12 +258,15 @@ li {
     text-decoration: none;
     color: var(--text-color);
 }
+
 .contacto-info img {
     width: 70%;
 }
-.contacto-info h2{
+
+.contacto-info h2 {
     font-size: 20px;
 }
+
 .info {
     display: flex;
     flex-direction: column;
@@ -275,9 +282,11 @@ li {
 .info img {
     width: 70%;
 }
-.info h2{
+
+.info h2 {
     flex-wrap: wrap;
 }
+
 #habilidades {
     display: flex;
     flex-direction: column;
@@ -285,11 +294,13 @@ li {
     justify-content: center;
     gap: 10px;
 }
-#habilidades div h2{
+
+#habilidades div h2 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .hab-info {
 
     margin-top: 10px;
@@ -311,26 +322,30 @@ li {
     flex-wrap: wrap;
     font-size: 30px;
 }
-.sobremi-info{
+
+.sobremi-info {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 35px;
     justify-content: center;
 }
-.udistrital{
+
+.udistrital {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
 }
-.udistrital img{
+
+.udistrital img {
     width: 80px;
     height: 80px;
 }
+
 .sobremi-img {
- 
+
     border-radius: 25%;
     max-width: 500px;
     align-items: center;
@@ -340,12 +355,15 @@ li {
 #sobremi p {
     font-size: 20px;
 }
-#sobremi h1{
+
+#sobremi h1 {
     font-size: 45px;
 }
-#sobremi h2{
+
+#sobremi h2 {
     font-size: 25px;
 }
+
 #button-idioma {
     display: flex;
     flex-direction: column;
@@ -422,7 +440,7 @@ li {
 .proyecto-enlace {
     width: 60px;
     height: 60px;
-    
+
     padding: 5px;
 }
 
@@ -467,7 +485,8 @@ li {
     border-radius: 15px;
     object-fit: cover;
 }
-#diplomas{
+
+#diplomas {
     display: flex;
     flex-direction: row;
     align-items: start;
@@ -476,22 +495,25 @@ li {
     width: 100%;
     gap: 30px;
 }
-.diplomas-info{
+
+.diplomas-info {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 10px;
     height: 150px;
-   
+
     box-sizing: border-box;
     justify-content: center;
 }
-.diplomas-info img{
+
+.diplomas-info img {
     height: 120px;
     width: 120px;
 }
-.diplomas-info h1{
-   
+
+.diplomas-info h1 {
+
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
@@ -500,23 +522,26 @@ li {
 }
 
 @media screen and (max-width : 742px) {
-    body{
+    body {
         overflow-y: scroll;
     }
+
     .content {
         flex-direction: column;
         box-sizing: content-box;
     }
-    .diplomas-info{
+
+    .diplomas-info {
         flex-direction: column;
         height: auto;
     }
-    
-    #diplomas{
+
+    #diplomas {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
+
     .izquierda {
         width: 100%;
         justify-content: end;
@@ -555,10 +580,12 @@ li {
         flex-direction: column;
         padding: 0;
     }
-    .sobremi-img{
+
+    .sobremi-img {
         width: 100%;
     }
-    .sobremi-info{
+
+    .sobremi-info {
         flex-direction: column;
     }
 
@@ -578,11 +605,12 @@ li {
         max-width: 250px;
     }
 
- 
-    .derecha{
+
+    .derecha {
         padding: 0;
     }
-    body::-webkit-scrollbar{
+
+    body::-webkit-scrollbar {
         background-color: var(--background-color-3);
         width: 15px;
     }
