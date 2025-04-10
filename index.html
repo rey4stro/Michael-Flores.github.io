@@ -1,309 +1,179 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Michael Flores</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./img/Perfil.png" type="image/x-icon" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <script
-      src="https://kit.fontawesome.com/f7101e53d9.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div class="toggle">
-      <i class="fa-solid fa-bars" id="toggle-btn"></i>
-      <div class="idioma">
-        <button id="button-idioma">
-          <h1 id="idioma-p">EN</h1>
-          <i class="fa-solid fa-language"></i>
-        </button>
-        <button id="button-theme">
-          <i class="fa-solid fa-circle-half-stroke"></i>
-        </button>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Arley Flores Benavides - Portafolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e0f2fe, #f0f9ff);
+      color: #1e3a8a;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header, footer {
+      background-color: #1e40af;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #fff;
+    }
+    h2 {
+      color: #1e40af;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .icon-link {
+      margin: 0 10px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: #e0f2fe;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .skills, .projects, .education-cards, .courses-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #ffffff;
+      padding: 15px;
+      border: 1px solid #93c5fd;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 4px 4px 15px rgba(0,0,0,0.15);
+    }
+    .project-img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a.email-link {
+      color: #2563eb;
+      text-decoration: underline;
+      font-size: 1.1rem;
+    }
+    .skills div {
+      background: #e0f2fe;
+      border: 1px solid #93c5fd;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    .skills div:hover {
+      background: #bfdbfe;
+    }
+    .skills i {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Michael Arley Flores Benavides</h1>
+    <p>Tecnólogo en Sistematización de Datos | Estudiante de Ingeniería en Telemática</p>
+    <div>
+      <a class="icon-link" href="https://github.com/rey4stro" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a class="icon-link" href="https://www.linkedin.com/in/michael-arley-flores" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </header>
+
+  <div class="section">
+    <h2>Sobre Mí</h2>
+    <p>Soy un desarrollador apasionado con experiencia en desarrollo web y de software. Actualmente curso Ingeniería en Telemática y me formé como Tecnólogo en Sistematización de Datos. Mi objetivo es aplicar tecnología para crear soluciones creativas y funcionales con un toque único y culturalmente influenciado por Japón.</p>
+
+    <h2>Educación</h2>
+    <div class="education-cards">
+      <div class="card"><strong>Ingeniería en Telemática</strong><br />Universidad Distrital (2018 - Presente)</div>
+      <div class="card"><strong>Tecnólogo en Sistematización de Datos</strong><br />Universidad Distrital (2006 - 2008)</div>
+      <div class="card"><strong>Bachiller Académico</strong><br />I.E.D Orlando Fals Borda (2001 - 2013)</div>
     </div>
 
-    <div class="content">
-      <div class="izquierda">
-        <div class="perfil-nombre">
-          <img src="./img/Perfil.png" alt="" />
-          <h2>Michael Flores</h2>
-        </div>
-        <li>
-          <a href="#inicio"
-            ><i class="fa-solid fa-house"></i
-            ><span id="menu-inicio">Inicio</span></a
-          >
-        </li>
-        <li>
-          <a href="#sobremi"
-            ><i class="fa-solid fa-address-card"></i
-            ><span id="menu-sobremi">Sobre mi</span></a
-          >
-        </li>
-        <li>
-          <a href="#habilidades"
-            ><i class="fa-solid fa-list-check"></i
-            ><span id="menu-habilidades">Habilidades</span></a
-          >
-        </li>
-        <li>
-          <a href="#proyectos"
-            ><i class="fa-solid fa-diagram-project"></i
-            ><span id="menu-proyectos">Proyectos</span></a
-          >
-        </li>
-        <li>
-          <a href="#diplomas">
-            <i class="fa-solid fa-school"></i>
-            <span id="menu-diplomas">Estudios</span></a
-          >
-        </li>
-        <li>
-          <a href="#contacto"
-            ><i class="fa-solid fa-address-book"></i
-            ><span id="menu-contacto">Contacto</span></a
-          >
-        </li>
-      </div>
-
-      <div class="derecha">
-        <section id="inicio">
-          <div class="carousel-container">
-            <div class="carousel">
-              <div class="carousel-item">
-                <img src="./img/carousel/imagen (1).png" alt="Imagen 1" />
-              </div>
-              <div class="carousel-item">
-                <img src="./img/carousel/imagen (2).png" alt="Imagen 2" />
-              </div>
-              <div class="carousel-item">
-                <img src="./img/carousel/imagen (3).png" alt="Imagen 2" />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="seccion" id="sobremi">
-          <img class="sobremi-img" src="./img/Perfil.png" alt="" />
-          <div class="sobremi-info">
-            <h1>Michael Arley Flores Benavides</h1>
-            <h2>Tecnologo en sistematizacion de datos</h2>
-            <div class="udistrital">
-              <img src="./img/icons/UD.png" alt="universidad" />
-              <h2>Univesidad Distrital Francisco José de Caldas</h2>
-            </div>
-            <p id="h1-about-me">
-              Soy un profesional en búsqueda de desafíos que me permitan aplicar
-              mis habilidades de rápido aprendizaje, proactividad, trabajo en
-              equipo y responsabilidad. Aspiro a formar parte de una empresa que
-              brinde oportunidades para alcanzar metas ambiciosas y fomente mi
-              crecimiento laboral, personal e intelectual.
-            </p>
-          </div>
-        </section>
-        <section class="seccion" id="habilidades">
-          <div class="habilidades-lenguajes">
-            <h2 id="habilidades-lenguajes">Lenguajes de programación</h2>
-            <div class="hab-info">
-              <div class="info">
-                <img src="./img/icons/java.png" />
-                <h2>Java</h2>
-              </div>
-              <div class="info">
-                <img src="./img/icons/python.png" alt="" />
-                <h2>Python</h2>
-              </div>
-              <div class="info">
-                <img src="./img/icons/c.png" alt="" />
-                <h2>C, C++, C#</h2>
-              </div>
-            </div>
-          </div>
-          <div class="habilidades-frameworks">
-            <h2 id="habilidades-framework">Frameworks y bibliotecas</h2>
-            <div class="hab-info">
-              <div class="info">
-                <img src="./img/icons/react.png" alt="" />
-                <h2>React</h2>
-              </div>
-              <div class="info">
-                <img src="./img/icons/react.png" alt="" />
-                <h2>React Native</h2>
-              </div>
-            </div>
-          </div>
-          <div class="habilidades-basededatos">
-            <h2 id="habilidades-basededatos">
-              Bases de datos y almacenamiento en la nube
-            </h2>
-            <div class="hab-info">
-              <div class="info">
-                <img src="./img/icons/sql.png" alt="" />
-                <h2>SQL</h2>
-              </div>
-              <div class="info">
-                <img src="./img/icons/firebase.png" alt="" />
-                <h2>Firebase</h2>
-              </div>
-            </div>
-          </div>
-          <div class="habilidades-web">
-            <h2 id="habilidades-web">Tecnologías web</h2>
-            <div class="hab-info">
-              <div class="info">
-                <img src="./img/icons/html.png" alt="" />
-                <h2>Html</h2>
-              </div>
-              <div class="info">
-                <img src="./img/icons/js.png" alt="" />
-                <h2>Js</h2>
-              </div>
-              <div class="info">
-                <img src="./img/icons/css.png" alt="" />
-                <h2>Css</h2>
-              </div>
-            </div>
-          </div>
-          <div class="habilidades-plataformas">
-            <h2 id="habilidades-plataformas">Plataformas y entorno</h2>
-            <div class="hab-info">
-              <div class="info">
-                <img src="./img/icons/nodejs.png" alt="" />
-                <h2>Nodejs</h2>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="seccion" id="proyectos">
-          <div class="proyecto">
-            <img src="./img/projects/project anime.png" alt="Pagina anime" />
-            <hr />
-            <h1 id="proyecto-anime-titulo">Pagina Animes</h1>
-            <hr />
-            <div class="proyecto-tecnologias">
-              <img src="./img/icons/react.png" alt="react" />
-              <img src="./img/icons/html.png" alt="react" />
-              <img src="./img/icons/css.png" alt="react" />
-              <img src="./img/icons/firebase.png" alt="react" />
-              <img src="./img/icons/js.png" alt="react" />
-            </div>
-            <hr />
-            <a href="https://animesr4.netlify.app/" target="_blank"
-              ><img src="./img/icons/github.png" alt="" class="proyecto-enlace"
-            /></a>
-          </div>
-          <div class="proyecto">
-            <img
-              src="./img/projects/simulador blockchain.png"
-              alt="simulador-blockchain"
-            />
-            <hr />
-            <h1 id="simulador-blockchain">Simulador Blockchain</h1>
-            <hr />
-            <div class="proyecto-tecnologias">
-              <img src="./img/icons/python.png" alt="react" />
-              <img src="./img/icons/json.png" alt="react" />
-              <img src="./img/icons/html.png" alt="react" />
-              <img src="./img/icons/css.png" alt="react" />
-              <img src="./img/icons/flask.png" alt="react" />
-            </div>
-            <hr />
-            <a
-              href="https://github.com/rey4stro/SimuladorBlockChain"
-              target="_blank"
-              ><img src="./img/icons/github.png" alt="" class="proyecto-enlace"
-            /></a>
-          </div>
-          <div class="proyecto">
-            <img src="./img/projects/pokedex.png" alt="pokedex" />
-            <hr />
-            <h1 id="pokedex">Pokedex</h1>
-            <hr />
-            <div class="proyecto-tecnologias">
-              <img src="./img/icons/react.png" alt="react" />
-              <img src="./img/icons/pokeapi.png" alt="react" />
-              <img src="./img/icons/js.png" alt="react" />
-              <img src="./img/icons/html.png" alt="react" />
-              <img src="./img/icons/css.png" alt="react" />
-            </div>
-            <hr />
-            <a href="https://github.com/rey4stro/Pokedex" target="_blank"
-              ><img src="./img/icons/github.png" alt="" class="proyecto-enlace"
-            /></a>
-          </div>
-        </section>
-        <section class="seccion" id="diplomas">
-          <div class="diplomas-info">
-            <img src="./img/icons/UD.png" alt="" />
-            <h1>Tecnologo en sistematizacion de datos</h1>
-            <h1>Univesidad distrital Francisco José de caldas</h1>
-            <h1>2022</h1>
-          </div>
-          <div class="diplomas-info">
-            <img src="./img/icons/UD.png" alt="" />
-            <h1>Ingeneria en telematica</h1>
-            <h1>Univesidad distrital Francisco José de caldas</h1>
-            <h1>Ultimo Semestre</h1>
-          </div>
-          <div class="diplomas-info">
-            <img src="./img/icons/coursera.png" alt="" />
-            <h1>python</h1>
-            <h1>Coursera</h1>
-            <h1>2020</h1>
-          </div>
-          <div class="diplomas-info">
-            <img src="./img/icons/udemy.png" alt="" />
-            <h1>Html Css Js Nodejs</h1>
-            <h1>Udemy</h1>
-            <h1>2022</h1>
-          </div>
-          <div class="diplomas-info">
-            <img src="./img/icons/udemy.png" alt="" />
-            <h1>React-Native</h1>
-            <h1>Udemy</h1>
-            <h1>2025</h1>
-          </div>
-        </section>
-
-        <section class="seccion" id="contacto">
-          <div class="contacto-info">
-            <img src="./img/icons/ubicacion.png" alt="" />
-            <h2>Bogota, Colombia</h2>
-          </div>
-          <a
-            href="mailto:michaflobe@gmail.com"
-            target="_blank"
-            class="contacto-info"
-          >
-            <img src="./img/icons/correo.png" alt="" />
-            <h2>michaflobe@gmail.com</h2>
-          </a>
-          <a
-            href="https://wa.me/573104827716"
-            target="_blank"
-            class="contacto-info"
-          >
-            <img src="./img/icons/telefono.png" alt="" />
-            <h2>+57 3104827716</h2>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/michael-arley-flores-benavides-9554bb226/"
-            target="_blank"
-            class="contacto-info"
-          >
-            <img src="./img/icons/linkedin.png" alt="" />
-            <h2>linkedin</h2>
-          </a>
-        </section>
-      </div>
+    <h2>Cursos Complementarios</h2>
+    <div class="courses-cards">
+      <div class="card"><strong>React Native Expo:</strong> Aplicaciones nativas para iOS y Android<br /><small>Udemy (2025)</small></div>
+      <div class="card"><strong>Python:</strong> Fundamentos de programación<br /><small>Coursera (2020)</small></div>
+      <div class="card"><strong>HTML, CSS, JavaScript, Node.js:</strong> Desarrollo Web<br /><small>Udemy (2022)</small></div>
     </div>
 
-    <script src="js/index.js"></script>
-  </body>
+    <h2>Habilidades Técnicas</h2>
+    <div class="skills">
+      <div><i class="fab fa-java"></i> Java</div>
+      <div><i class="fab fa-python"></i> Python</div>
+      <div><i class="fas fa-code"></i> C/C++</div>
+      <div><i class="fas fa-c"></i> C#</div>
+      <div><i class="fab fa-js"></i> JavaScript</div>
+      <div><i class="fab fa-html5"></i> HTML</div>
+      <div><i class="fab fa-css3-alt"></i> CSS</div>
+      <div><i class="fab fa-node-js"></i> Node.js</div>
+      <div><i class="fab fa-react"></i> React / React Native</div>
+      <div><i class="fas fa-fire"></i> Firebase</div>
+      <div><i class="fas fa-flask"></i> Flask</div>
+      <div><i class="fas fa-database"></i> SQL</div>
+    </div>
+
+    <h2>Proyectos</h2>
+    <div class="projects">
+      <div class="card">
+        <img src="/img/projects/reactAnime.png" alt="Página Anime" class="project-img" />
+        <h3>Página Anime</h3>
+        <p>Explora información sobre animes.</p>
+        <p><small>React, Firebase</small></p>
+        <a href="https://animesr4.netlify.app" target="_blank">Ver más</a>
+      </div>
+      <div class="card">
+        <img src="/img/projects/blockchain.png" alt="Simulador Blockchain" class="project-img" />
+        <h3>Simulador Blockchain</h3>
+        <p>Cadena de bloques educativa.</p>
+        <p><small>Python, Flask</small></p>
+        <a href="https://github.com/rey4stro/SimuladorBlockChain" target="_blank">Ver más</a>
+      </div>
+      <div class="card">
+        <img src="/img/projects/pokedex.png" alt="Pokedex" class="project-img" />
+        <h3>Pokédex</h3>
+        <p>Consulta Pokémon con PokeAPI.</p>
+        <p><small>React, Flask</small></p>
+        <a href="https://github.com/rey4stro/Pokedex" target="_blank">Ver más</a>
+      </div>
+      <div class="card">
+        <img src="/img/projects/todoAnime.png" alt="To Do Anime" class="project-img" />
+        <h3>To Do Anime</h3>
+        <p>Tareas con temática anime.</p>
+        <p><small>React Native, Expo</small></p>
+        <a href="https://github.com/rey4stro/ToDoAnime" target="_blank">Ver más</a>
+      </div>
+     
+    </div>
+
+    <h2>Contacto</h2>
+    <p>¿Quieres trabajar conmigo? ¡Contáctame!</p>
+    <a href="mailto:michaflobe@gmail.com" class="email-link"><i class="fas fa-envelope"></i> michaflobe@gmail.com</a>
+  </div>
+
+  <footer>
+    <p>© 2025 Michael Arley Flores Benavides — Portfolio personal con inspiración japonesa 🇯🇵</p>
+  </footer>
+</body>
 </html>
